@@ -47,6 +47,42 @@ Output file content:
 192.168.1.2
 192.168.1.3`
 
+Combine multiple CIDRs:
+
+`python hlm.py -t 192.168.1.0/29,10.0.0.0/30 -o output.txt`
+
+Output file content:
+
+`10.0.0.0
+10.0.0.1
+192.168.1.0
+192.168.1.1
+192.168.1.2
+192.168.1.3
+192.168.1.4
+192.168.1.5
+192.168.1.6
+192.168.1.7`
+
+Mix CIDR, ranges, and comma-separated IPs:
+
+`python hlm.py -t 192.168.1.0/29,10.0.0.10-12,172.16.0.1,192.168.2.1 -o output.txt`
+
+Output file content:
+`10.0.0.10
+10.0.0.11
+10.0.0.12
+172.16.0.1
+192.168.1.0
+192.168.1.1
+192.168.1.2
+192.168.1.3
+192.168.1.4
+192.168.1.5
+192.168.1.6
+192.168.1.7
+192.168.2.1`
+
 Generate a list with a range
 
 `python hlm.py -t 192.168.1.10-12 -o output.txt`
@@ -64,6 +100,20 @@ Exclude specific IPs
 Output file content:
 
 `192.168.1.0
+192.168.1.1
+192.168.1.4
+192.168.1.5
+192.168.1.6
+192.168.1.7`
+
+Combine multiple exclusions:
+
+`python hlm.py -t 192.168.1.0/29,10.0.0.0/30 -e 192.168.1.2-3,10.0.0.1 -o output.txt`
+
+Output file content:
+
+`10.0.0.0
+192.168.1.0
 192.168.1.1
 192.168.1.4
 192.168.1.5
