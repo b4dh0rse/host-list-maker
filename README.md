@@ -42,10 +42,12 @@ Generate a list from a CIDR block
 
 Output file content:
 
-`192.168.1.0
+```text
+192.168.1.0
 192.168.1.1
 192.168.1.2
-192.168.1.3`
+192.168.1.3
+```
 
 Combine multiple CIDRs:
 
@@ -53,7 +55,8 @@ Combine multiple CIDRs:
 
 Output file content:
 
-`10.0.0.0
+```text
+10.0.0.0
 10.0.0.1
 192.168.1.0
 192.168.1.1
@@ -62,14 +65,16 @@ Output file content:
 192.168.1.4
 192.168.1.5
 192.168.1.6
-192.168.1.7`
+192.168.1.7
+```
 
 Mix CIDR, ranges, and comma-separated IPs:
 
 `python hlm.py -t 192.168.1.0/29,10.0.0.10-12,172.16.0.1,192.168.2.1 -o output.txt`
 
 Output file content:
-`10.0.0.10
+```text
+10.0.0.10
 10.0.0.11
 10.0.0.12
 172.16.0.1
@@ -89,9 +94,11 @@ Generate a list with a range
 
 Output file content:
 
-`192.168.1.10
+```text
+192.168.1.10
 192.168.1.11
-192.168.1.12`
+192.168.1.12
+```
 
 Exclude specific IPs
 
@@ -99,12 +106,14 @@ Exclude specific IPs
 
 Output file content:
 
-`192.168.1.0
+```text
+192.168.1.0
 192.168.1.1
 192.168.1.4
 192.168.1.5
 192.168.1.6
-192.168.1.7`
+192.168.1.7
+```
 
 Combine multiple exclusions:
 
@@ -112,13 +121,15 @@ Combine multiple exclusions:
 
 Output file content:
 
-`10.0.0.0
+```text
+10.0.0.0
 192.168.1.0
 192.168.1.1
 192.168.1.4
 192.168.1.5
 192.168.1.6
-192.168.1.7`
+192.168.1.7
+```
 
 ## License
 
