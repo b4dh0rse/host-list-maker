@@ -38,7 +38,9 @@ Python 3.x
 
 Generate a list from a CIDR block
 
-`python hlm.py -t 192.168.1.0/30 -o output.txt`
+```text
+python hlm.py -t 192.168.1.0/30 -o output.txt
+```
 
 Output file content:
 
@@ -51,7 +53,9 @@ Output file content:
 
 Combine multiple CIDRs:
 
-`python hlm.py -t 192.168.1.0/29,10.0.0.0/30 -o output.txt`
+```text
+python hlm.py -t 192.168.1.0/29,10.0.0.0/30 -o output.txt
+```
 
 Output file content:
 
@@ -70,9 +74,12 @@ Output file content:
 
 Mix CIDR, ranges, and comma-separated IPs:
 
-`python hlm.py -t 192.168.1.0/29,10.0.0.10-12,172.16.0.1,192.168.2.1 -o output.txt`
+```text
+python hlm.py -t 192.168.1.0/29,10.0.0.10-12,172.16.0.1,192.168.2.1 -o output.txt
+```
 
 Output file content:
+
 ```text
 10.0.0.10
 10.0.0.11
@@ -86,11 +93,14 @@ Output file content:
 192.168.1.5
 192.168.1.6
 192.168.1.7
-192.168.2.1`
+192.168.2.1
+```
 
 Generate a list with a range
 
-`python hlm.py -t 192.168.1.10-12 -o output.txt`
+```text
+python hlm.py -t 192.168.1.10-12 -o output.txt
+```
 
 Output file content:
 
@@ -102,7 +112,9 @@ Output file content:
 
 Exclude specific IPs
 
-`python hlm.py -t 192.168.1.0/29 -e 192.168.1.2,192.168.1.3 -o output.txt`
+```text
+python hlm.py -t 192.168.1.0/29 -e 192.168.1.2,192.168.1.3 -o output.txt
+```
 
 Output file content:
 
@@ -117,7 +129,9 @@ Output file content:
 
 Combine multiple exclusions:
 
-`python hlm.py -t 192.168.1.0/29,10.0.0.0/30 -e 192.168.1.2-3,10.0.0.1 -o output.txt`
+```text
+python hlm.py -t 192.168.1.0/29,10.0.0.0/30 -e 192.168.1.2-3,10.0.0.1 -o output.txt
+```
 
 Output file content:
 
